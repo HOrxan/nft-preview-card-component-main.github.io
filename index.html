@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      
+      *,
+      *::after,
+      *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* ## Colors */
+
+        /* ### Primary */
+
+        --Blue-500: hsl(215, 51%, 70%);
+        --Cyan-400: hsl(178, 100%, 50%);
+        --Cyan-400-a: hsla(178, 100%, 50%, 0.5);
+
+        /* ### Neutral */
+
+        --Blue-950-main-BG: hsl(217, 54%, 11%);
+        --Blue-900-card-BG: hsl(216, 50%, 16%);
+        --Blue-800-line: hsl(215, 32%, 27%);
+        --White: hsl(0, 0%, 100%);
+
+        /* ## Typography */
+
+        /* ### Body */
+
+        --Font-size-paragraph: 18px;
+
+        --Weights-300: 300;
+        --Weights-400: 400;
+        --Weights-600: 600;
+      }
+
+      body {
+        background-color: var(--Blue-950-main-BG);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Outfit";
+        font-weight: var(--Weights-400);
+      }
+
+      main {
+        padding: 25px;
+        width: 350px;
+        background: var(--Blue-900-card-BG);
+        border-radius: 20px;
+        max-width: 1440px;
+        max-height: 900px;
+      }
+
+      .picture {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .title {
+        font-size: 22px;
+        color: var(--White);
+        margin-block: 20px;
+      }
+
+      p {
+        color: var(--Blue-500);
+        font-size: var(--Font-size-paragraph);
+        font-weight: var(--Weights-300);
+      }
+
+      .money {
+        color: var(--Cyan-400);
+        font-weight: var(--Weights-600);
+      }
+
+      .date {
+        color: var(--Blue-500);
+      }
+
+      .money-date {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-block: 20px;
+        font-weight: var(--Weights-600);
+      }
+
+      .money, .time {
+        display: flex;
+        gap: 10px;
+      }
+
+      .picture-avatar {
+        width: 36px;
+        border: 1px solid var(--White);
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .name-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .name {
+        font-weight: var(--Weights-400);
+      }
+      
+      strong {
+        color: var(--White);
+      }
+
+      .line {
+        border: 1px solid var(--Blue-800-line);
+      }
+
+      .date {
+        font-weight: var(--Weights-400);
+      }
+      .picture-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+       .title:hover, strong:hover{
+        color: var(--Cyan-400);
+        cursor: pointer;
+      }
+      .view-card
+      {
+        position: absolute;
+        background-color: var(--Cyan-400-a);
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         opacity: 0;
+         z-index: 100;
+      }
+      .view-card:hover{
+        opacity: 1;
+        
+      }
+      .view{
+        width: 50px;
+        height: 50px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <main>
+
+        <section class="picture-card">
+          <img class="picture" src="images/image-equilibrium.jpg" alt="">
+          <section class="view-card">
+          <img class="view" src="images/icon-view.svg" alt="">
+          </section>
+        </section>
+
+        <section>
+          <h1 class="title">Equilibrium #3429</h1>
+        </section>
+
+        <section>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+        </section>
+
+        <section class="money-date">
+          <section class="money">
+            <img src="images/icon-ethereum.svg" alt="" width="auto" height="20px">
+            <p class="money">0.041 ETH</p>
+          </section>
+
+          <section class="time">
+            <img src="images/icon-clock.svg" alt="" width="auto" height="20px">
+            <p class="date">3 days left</p>
+          </section>
+          
+        </section>
+        <section class="line"></section>
+        <section class="name-card">
+          <img class="picture-avatar" src="images/image-avatar.png" alt="">
+          <p class="name">Creation of <strong>Jules Wyvern</strong></p>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

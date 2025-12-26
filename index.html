@@ -77,6 +77,7 @@
         font-size: 22px;
         color: var(--White);
         margin-block: 20px;
+        transition: ease-in 1s;
       }
 
       p {
@@ -128,6 +129,7 @@
       
       strong {
         color: var(--White);
+        transition: ease-in 1s;
       }
 
       .line {
@@ -158,15 +160,23 @@
         align-items: center;
          opacity: 0;
          z-index: 100;
+        transition: ease-in 2s;
+        
       }
       .view-card:hover{
         opacity: 1;
-        
+        .view{
+          transform: scale(1);
+        }
       }
       .view{
         width: 50px;
         height: 50px;
-        
+        transform: scale(0.1);
+        transition: ease-in 1.5s;
+      }
+      .view:hover{
+        transform: scale(1);
       }
     </style>
   </head>
